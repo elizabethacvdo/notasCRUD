@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 const periodoRoute  = require('./routes/periodo');
 const docenteRoute  = require('./routes/docente');
 const alumnosRoute  = require('./routes/alumno');
@@ -7,7 +8,7 @@ const cicloRoute  = require('./routes/ciclo');
 const app = express();
 
  
-
+app.use(cors());
 //-----------------------settings
 
 app.set('appName','proyectoBD');
